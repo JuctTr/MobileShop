@@ -1,0 +1,75 @@
+/**index.wxss**/
+.nav{
+    display: flex;
+   flex-direction: row; 
+}
+.nav-item{
+   margin-top: 20px;
+  margin-left: 35px;
+  text-align: center; 
+}
+.nav-item .text{
+  font-size: 12px;
+}
+swiper{
+  width: 100%;
+  height: 215px;
+}
+.slide-image{
+  width: 100%;
+}
+.hr{
+  background-color: rgba(0, 0, 0, 0.1);
+  height: 10px;
+  margin-top: 20px;
+}
+.head{
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  font-size: 13px;
+  color: #999;
+}
+.right{
+  position: absolute;
+  right: 10px;
+  color: #ccc;
+}
+.image{
+  width: 60px;
+  height: 60px;
+  vertical-align: middle;
+}
+.item{
+  display: flex;
+  flex-direction: row;
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+.desc{
+  margin-left: 20px;
+  line-height: 30px;
+
+}
+.title{
+  font-weight: bold;
+}
+.count{
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
+  color: #999;
+}
+.brower{
+   position: absolute; 
+  right: 70px;
+}
+.moments{
+  position: absolute;
+  right: 10px;
+}
+.hr1{
+  height: 2px;
+  background-color: #ccc;
+  opacity: 0.2;
+}

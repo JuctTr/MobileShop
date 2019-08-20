@@ -1,0 +1,55 @@
+<!--pages/login/login.wxml-->
+<view class='content'>
+  <view class="toptips toptips_warn" wx:if="{{showTopTips}}">{{errorMsg}}</view>
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="login_info" style="top:{{windowHeight * 0.35}}px;width: {{windowWidth * 0.92}}px;">
+      <view class='account'>
+        <view class='title'>
+          <view class='label'>账号</view>
+        </view>
+        <view class='num'>
+          <input type='text' bindinput='accountInput' placeholder='请输入账号' placeholder-style='color:#999999;' name="account" value='{{account}}'></input>
+        </view>
+      </view>
+      <view class='hr'></view>
+      <view class='account'>
+        <view class='title'>
+          <view class='label'>密码</view>
+        </view>
+        <view class='num'>
+          <input type='password' bindinput='accountInput' placeholder='请输入密码' placeholder-style='color:#999999;' name="password" value='{{password}}'></input>
+        </view>
+        <!-- <view class='see'><image src='{{imgsrc}}' bindtap='imageskip' style='width: 30px; height: 28px;'></image></view> -->
+      </view>
+      <view class='hr'></view>
+      <view class='account'>
+        <view class='title'>
+          <view class='label'>确认密码</view>
+        </view>
+        <view class='num'>
+          <input type='password' bindinput='accountInput' placeholder='请再次输入密码' placeholder-style='color:#999999;' name="subPassword" value='{{subPassword}}'></input>
+        </view>
+        <!-- <view class='see'><image src='{{imgsrc}}' bindtap='imageskip' style='width: 30px; height: 28px;'></image></view> -->
+      </view>
+      <view class='hr'></view>
+      <button class='btn' disabled='{{disabled}}' type='{{btnstate}}' form-type='submit'>注册</button>
+      <view class='operate'>
+        <view>
+          <navigator url='../mobile/mobile'>手机快速注册</navigator>
+        </view>
+        <view>找回密码</view>
+      </view>
+    </view>
+  </form>
+
+  <view class='login'>
+    <view>
+      <image src='images/wxlogin.png'></image>
+      <view class='text'>微信登录</view>
+    </view>
+    <view>
+      <image src='images/qqlogin.png'></image>
+      <view class='text'>QQ登录</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,23 @@
+<!--pages/location/location.wxml-->
+<!-- <view><text>经度{{jd}}</text></view>  
+<view><text>纬度{{wd}}</text></view>  
+<view><text>地点{{address}}</text></view>  -->
+
+<view class="wrapper">  
+  <view class="body">  
+    <view class="body-wrapper">  
+      <form bindsubmit="openLocation">      
+        <view class="body-form">  
+            <text class="body-form-key">经度:</text>  
+            <input class="body-form-value" type="text" value="{{location.longitude}}" name="longitude"></input>  
+            <text class="body-form-key">纬度:</text>  
+            <input class="body-form-value" type="text"  value="{{location.latitude}}" name="latitude"></input>  
+        </view>  
+        <view class="body-buttons">  
+          <button class="body-button" type="default" bindtap="getLocation">获取地理位置</button>  
+          <button class="body-button" type="default" formType="submit">查看地理位置</button>  
+        </view>  
+      </form>  
+    </view>  
+  </view>  
+</view>  

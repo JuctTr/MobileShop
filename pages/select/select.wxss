@@ -1,0 +1,24 @@
+/* pages/select/select.wxss */
+.content{
+  width: 100%;
+  text-align: center;
+}
+.userType{
+  display: flex;
+  flex-direction: row;
+  padding-top: 10em;
+}
+.seller{
+  width: 50%;
+}
+.buyer{
+  width: 50%;
+}
+.img{
+  width: 100px;
+  height: 100px;
+}
+.text{
+  font-weight: bolder;
+  font-family: "微软雅黑";
+}

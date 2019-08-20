@@ -1,0 +1,17 @@
+<!--pages/template/template.wxml-->
+<template name="muban">
+  <block wx:for="{{array}}">
+  <view class='item' bindtap='seeDetail' id='0'>
+    <view><image src='{{item.img}}' class='image'></image></view>
+    <view class='desc'>
+      <view class='title'>{{item.title}}</view>
+      <view class='count'>
+        <view>{{item.type}}</view>
+        <view class='brower'>{{item.brower}}</view>
+        <view class='moments'>{{item.moments}}</view>
+      </view>
+    </view>
+  </view>
+  <view class='hr1'></view>
+  </block>
+</template>

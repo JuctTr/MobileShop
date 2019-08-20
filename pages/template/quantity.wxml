@@ -1,0 +1,10 @@
+<!-- <template name="quantity">
+  <block wx:for="{{carts}}">
+    <view class='item' bindtap='handleQuantityChange' id='componentId'>
+      <image class='label' src='../shopping_cart/images/reduce.png'></image>
+        <view class='count'>{{item.count}}</view>
+      <image class='label' src='../shopping_cart/images/add.png'></image>
+    </view>
+  </block>
+
+</template> -->
