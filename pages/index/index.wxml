@@ -1,4 +1,4 @@
-<!--index.wxml-->
+<!--index.wxml，首页-->
 <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}">
   <block wx:for="{{imgUrls}}">
     <swiper-item>
