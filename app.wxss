@@ -1,4 +1,6 @@
-/**app.wxss**/
+/**app.wxss全局样式**/
+@import 'public/fonts/fonts.wxss';
+
 .container {
   height: 100%;
   display: flex;

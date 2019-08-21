@@ -15,7 +15,7 @@
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#494949",
     "navigationBarTitleText": "希卡",
-    "navigationBarTextStyle": "#fff",
+    "navigationBarTextStyle": "white",
     "backgroundColor": "#494949",
     "enablePullDownRefresh": true
   },
@@ -27,14 +27,14 @@
       {
         "pagePath": "pages/index/index",
         "text": "首页",
-        "iconPath": "pages/index/images/home.png",
-        "selectedIconPath": "pages/index/images/homeActive.png"
+        "iconPath": "public/images/index/icon-indexnor.png",
+        "selectedIconPath": "public/images/index/icon-indexsel.png"
       },
       {
         "pagePath": "pages/location/location",
         "text": "定位",
-        "iconPath": "pages/index/images/location.png",
-        "selectedIconPath": "pages/index/images/locationActive.png"
+        "iconPath": "public/images/index/iconfont_activity_location.png",
+        "selectedIconPath": "public/images/index/iconfont-locationfill.png"
       },
       {
         "pagePath": "pages/shopping_cart/shopping_cart",
