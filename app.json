@@ -6,7 +6,7 @@
     "pages/login/login",
     "pages/select/select",
     "pages/type_in/type_in",
-    "pages/seller_me/seller_me",
+    "pages/product-details/product-details",
     "pages/location/location",
     "pages/mobile/mobile",
     "pages/logs/logs"
@@ -27,26 +27,26 @@
       {
         "pagePath": "pages/index/index",
         "text": "首页",
-        "iconPath": "public/images/index/icon-indexnor.png",
-        "selectedIconPath": "public/images/index/icon-indexsel.png"
+        "iconPath": "public/images/icon-indexnor.png",
+        "selectedIconPath": "public/images/icon-indexsel.png"
       },
       {
         "pagePath": "pages/location/location",
         "text": "定位",
-        "iconPath": "public/images/index/iconfont_activity_location.png",
-        "selectedIconPath": "public/images/index/iconfont-locationfill.png"
+        "iconPath": "public/images/location.png",
+        "selectedIconPath": "public/images/location-bg.png"
       },
       {
         "pagePath": "pages/shopping_cart/shopping_cart",
         "text": "购物车",
-        "iconPath": "pages/index/images/shopping_cart.png",
-        "selectedIconPath": "pages/index/images/shopping_cartActive.png"
+        "iconPath": "public/images/cart.png",
+        "selectedIconPath": "public/images/cart-bg.png"
       },
       {
         "pagePath": "pages/me/me",
         "text": "我的",
-        "iconPath": "pages/index/images/me.png",
-        "selectedIconPath": "pages/index/images/meActive.png"
+        "iconPath": "public/images/me.png",
+        "selectedIconPath": "public/images/me-bg.png"
       }
     ]
   },

@@ -1,0 +1,20 @@
+/* pages/seller_me/seller_me.wxss */
+.product-detail-box{
+  width: 100%;
+  height: 100%;
+}
+swiper{
+  width: 100%;
+  height: 215px;
+}
+.slide-image{
+  width: 100%;
+}
+
+.page-bottom{
+  width: 100%;
+  height: 110rpx;
+  position: fixed;
+  bottom: 0;
+  background: #333;
+}

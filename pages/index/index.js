@@ -19,17 +19,18 @@ Page({
     this.setData({
       array: array
       });
-    wx:wx.navigateTo({
-      url: '../login/login',
-      success: function(res) {},
-      fail: function(res) {},
-      complete: function(res) {},
-    })
+      // 页面刚渲染，连接到登录页面
+    // wx:wx.navigateTo({
+    //   url: '../login/login',
+    //   success: function(res) {},
+    //   fail: function(res) {},
+    //   complete: function(res) {},
+    // })
   },
   initData:function(){
     var array = [];
     var object1 = new Object();
-    object1.img = "images/something.png";
+    object1.img = "images/book-bg.png";
     object1.title = "爱心早餐";
     object1.type = "商品描述";
     object1.brower = "525642浏览";
@@ -37,7 +38,7 @@ Page({
     array[0] = object1;
 
     var object2 = new Object();
-    object2.img = "images/Book.png";
+    object2.img = "images/book-bg.png";
     object2.title = "书籍";
     object2.type = "商品描述";
     object2.brower = "525642浏览";
@@ -45,7 +46,7 @@ Page({
     array[1] = object2;
 
     var object3 = new Object();
-    object3.img = "images/book1.png";
+    object3.img = "images/book-bg.png";
     object3.title = "购物车";
     object3.type = "商品描述";
     object3.brower = "525642浏览";
@@ -53,7 +54,7 @@ Page({
     array[2] = object3;
 
     var object4 = new Object();
-    object4.img = "images/book2.png";
+    object4.img = "images/book-bg.png";
     object4.title = "书籍";
     object4.type = "商品描述";
     object4.brower = "525642浏览";
@@ -61,7 +62,7 @@ Page({
     array[3] = object4;
 
     var object5 = new Object();
-    object5.img = "images/book2.png";
+    object5.img = "images/book-bg.png";
     object5.title = "书籍";
     object5.type = "商品描述";
     object5.brower = "525642浏览";
@@ -70,6 +71,13 @@ Page({
 
     return array;
   },
+  handlerDetailPage: function() {
+    console.log('我被店家了')
+    wx.navigateTo({
+      url: '../product-details/product-details'
+    })
+  },
+
   onReady: function(){
     
   },

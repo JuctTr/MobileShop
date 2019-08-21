@@ -1,0 +1,29 @@
+<!--pages/seller_me/seller_me.wxml-->
+<view class='product-detail-box display-flex flex-direction-column'>
+<!-- 轮播图 -->
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}">
+    <block wx:for="{{imgUrls}}" wx:key="key">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+<!-- 价格盒子 -->
+  <view class="money-box display-flex flex-space-between">
+    <view class="left-box">
+      <view class="book-name">书籍名称</view>
+      <view class="desc">对书籍的描述</view>
+    </view>
+
+
+    <view class="right-box">
+      <view class="share-btn">分享</view>      
+    </view>
+  </view>
+
+  <view class="page-bottom">
+    <view class="iconfont">
+      图标图标图标图标图标
+    </view>
+  </view>
+</view>
