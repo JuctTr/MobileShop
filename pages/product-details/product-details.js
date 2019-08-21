@@ -5,7 +5,16 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    imgUrls: [
+      '../allPageImages/shopping-cart-swiper0.jpg',
+      '../allPageImages/online-store-swiper1.jpg',
+      '../allPageImages/shopping-swiper2.jpg'
+    ],
+    indicatorDots: true,
+    circular: true,
+    autoplay: true,
+    interval: 5000,
+    duration: 1000    
   },
 
   /**

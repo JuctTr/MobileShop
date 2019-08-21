@@ -84,7 +84,7 @@ Page({
     qqmapsdk.search({
       keyword: '酒店',
       success: function (res) {
-        console.log(res);
+        console.log(res, '成功调用接口了');
       },
       fail: function (res) {
         console.log(res);

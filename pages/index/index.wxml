@@ -1,43 +1,50 @@
-<!--index.wxml-->
+<!--index.wxml，首页-->
+<view class='display-flex flex-direction-column'>
 <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}">
-  <block wx:for="{{imgUrls}}">
+  <block wx:for="{{imgUrls}}" wx:key="key">
     <swiper-item>
       <image src="{{item}}" class="slide-image" />
     </swiper-item>
   </block>
 </swiper>
+<!-- 中间四个图标 -->
 <view class='nav'>
   <view class='nav-item'>
     <view>
-      <image src='images/classify0.png' style='width: 50px; height:50px;'></image>
+      <image src='images/search.png' style='width: 50px; height:50px;'></image>
     </view>
     <view class='text'>搜索商品</view>
   </view>
   <view class='nav-item'>
-    <view>
-      <image src='images/classify1.png' style='width: 50px; height:50px;'></image>
+    <view bindtap='handlerDetailPage'>
+      <image src='images/add-cart.png' style='width: 50px; height:50px;'></image>
     </view>
     <view class='text'>商城</view>
   </view>
   <view class='nav-item'>
     <view>
-      <image src='images/classify2.png' style='width: 50px; height:50px;'></image>
+      <image src='images/shop.png' style='width: 50px; height:50px;'></image>
     </view>
     <view class='text'>美食养生</view>
   </view>
   <view class='nav-item'>
     <view>
-      <image src='images/classify3.png' style='width: 50px; height:50px;'></image>
+      <image src='images/lock.png' style='width: 50px; height:50px;'></image>
     </view>
     <view class='text'>美食养生</view>
   </view>
 </view>
+<!-- 下面的书本列表 -->
 <view class='hr'></view>
 <view class='head'>
   <view>日常活动</view>
   <view class='right'></view>
 </view>
+
 <import src="../template/template" />
+
 <view class='list'>
   <template is="muban" data="{{array}}" />
+</view>
+
 </view>
