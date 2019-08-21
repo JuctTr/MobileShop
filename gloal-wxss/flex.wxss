@@ -1,0 +1,146 @@
+/*盒子模型*/
+.display-flex {
+  display: flex;
+  box-sizing: border-box;
+}
+
+.flex-direction-column {
+  flex-direction: column;
+}
+
+.justify-content-end {
+  justify-content: end;
+}
+
+.flex-direction-row {
+  flex-direction: row;
+}
+
+.align-items-end {
+  align-items: flex-end;
+}
+
+.align-items-stretch {
+  align-items: stretch;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.flex-start {
+  justify-content: flex-start;
+}
+
+.flex-space-between {
+  justify-content: space-between;
+}
+.flex-space-around {
+  justify-content: space-around;
+}
+
+.flex-column-start {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.flex-start-center {
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.flex-end {
+  justify-content: flex-end;
+}
+
+.flex-end-center {
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.flex1-end-center {
+  flex: 1;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.flex-column-center {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-column-flex1 {
+  flex-direction: column;
+  flex: 1;
+}
+
+.flex1 {
+  display: flex;
+  flex: 1;
+}
+
+.flex2 {
+  display: flex;
+  flex: 2;
+}
+
+.flex1-center {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex2-center {
+  display: flex;
+  flex: 2;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex1-column-center {
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex1-end {
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.display-box {
+  display: -webkit-box;
+}
+
+.box1-center {
+  display: -webkit-box;
+  -webkit-box-flex: 1;
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+}
+
+.box1-column-center {
+  display: -webkit-box;
+  -webkit-box-flex: 1;
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  -webkit-box-orient: block-axis;
+}
