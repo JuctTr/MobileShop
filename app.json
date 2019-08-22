@@ -1,8 +1,8 @@
 {
   "pages": [
-    "pages/product-details/product-details",
-    "pages/index/index",    
     "pages/me/me",
+    "pages/index/index",
+    "pages/product-details/product-details",
     "pages/shopping_cart/shopping_cart",
     "pages/login/login",
     "pages/select/select",

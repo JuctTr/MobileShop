@@ -19,8 +19,8 @@
       <icon class="iconfont"></icon>
       <view class="share-btn">分享</view>
     
-      </view>      
-    </view>
+    </view>      
+    
   </view>
 
   <view class="page-bottom">
@@ -28,4 +28,5 @@
       图标图标图标图标图标
     </view>
   </view>
+
 </view>

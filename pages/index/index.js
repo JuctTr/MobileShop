@@ -24,32 +24,32 @@ Page({
     var array = [];
     var object1 = new Object();
     object1.img = "images/book-bg.png";
-    object1.title = "爱心早餐";
-    object1.type = "商品描述";
+    object1.title = "精神书铺";
+    object1.type = "书，是人类的精神食粮";
     object1.brower = "525642浏览";
     object1.moments = "评论区";
     array[0] = object1;
 
     var object2 = new Object();
     object2.img = "images/book-bg.png";
-    object2.title = "书籍";
-    object2.type = "商品描述";
+    object2.title = "发现";
+    object2.type = "为您推荐";
     object2.brower = "525642浏览";
     object2.moments = "评论区";
     array[1] = object2;
 
     var object3 = new Object();
     object3.img = "images/book-bg.png";
-    object3.title = "购物车";
-    object3.type = "商品描述";
+    object3.title = "故事";
+    object3.type = "我有酒，你有故事吗";
     object3.brower = "525642浏览";
     object3.moments = "评论区";
     array[2] = object3;
 
     var object4 = new Object();
     object4.img = "images/book-bg.png";
-    object4.title = "书籍";
-    object4.type = "商品描述";
+    object4.title = "日常必读";
+    object4.type = "哦豁，加油";
     object4.brower = "525642浏览";
     object4.moments = "评论区";
     array[3] = object4;
