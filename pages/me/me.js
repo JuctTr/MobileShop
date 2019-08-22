@@ -13,6 +13,15 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+  // 页面刚渲染，连接到登录页面
+    wx.navigateTo({
+      url: '../login/login',
+      success: function(res) {
+        console.log('页面刚渲染，连接到登录页面');
+      },
+      fail: function(res) {},
+      complete: function(res) {},
+    })    
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
