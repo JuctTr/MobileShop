@@ -13,11 +13,13 @@
     <view class="left-box">
       <view class="book-name">书籍名称</view>
       <view class="desc">对书籍的描述</view>
+      <view class="price">￥3900 <view class="inline">￥4025</view></view>
     </view>
-
-
     <view class="right-box">
-      <view class="share-btn">分享</view>      
+      <icon class="iconfont"></icon>
+      <view class="share-btn">分享</view>
+    
+      </view>      
     </view>
   </view>
 

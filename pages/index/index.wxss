@@ -1,11 +1,8 @@
 /**index.wxss**/
-.nav{
-    display: flex;
-   flex-direction: row; 
+.nav {
+  padding: 25rpx 50rpx;
 }
 .nav-item{
-   margin-top: 20px;
-  margin-left: 35px;
   text-align: center; 
 }
 .nav-item .text{
@@ -20,8 +17,7 @@ swiper{
 }
 .hr{
   background-color: rgba(0, 0, 0, 0.1);
-  height: 10px;
-  margin-top: 20px;
+  height: 10rpx;
 }
 .head{
   display: flex;

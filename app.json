@@ -1,12 +1,12 @@
 {
   "pages": [
+    "pages/product-details/product-details",
+    "pages/index/index",    
     "pages/me/me",
     "pages/shopping_cart/shopping_cart",
-    "pages/index/index",
     "pages/login/login",
     "pages/select/select",
     "pages/type_in/type_in",
-    "pages/product-details/product-details",
     "pages/location/location",
     "pages/mobile/mobile",
     "pages/logs/logs"

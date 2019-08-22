@@ -19,13 +19,6 @@ Page({
     this.setData({
       array: array
       });
-      // 页面刚渲染，连接到登录页面
-    // wx:wx.navigateTo({
-    //   url: '../login/login',
-    //   success: function(res) {},
-    //   fail: function(res) {},
-    //   complete: function(res) {},
-    // })
   },
   initData:function(){
     var array = [];

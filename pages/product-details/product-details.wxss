@@ -10,7 +10,23 @@ swiper{
 .slide-image{
   width: 100%;
 }
-
+.money-box{
+  padding: 30rpx 20rpx;
+}
+.money-box .left-box{
+  padding: 20rpx;
+}
+.money-box .left-box .book-name{
+  font-size: 30rpx;
+  color: #747d8c;
+}
+.money-box .left-box .desc{
+  font-size: 20rpx;
+  color: #a4b0be;
+}
+.inline{
+  display: inline;
+}
 .page-bottom{
   width: 100%;
   height: 110rpx;
