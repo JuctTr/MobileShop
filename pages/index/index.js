@@ -12,7 +12,10 @@ Page({
     circular: true,
     autoplay: true,
     interval: 5000,
-    duration: 1000
+    duration: 1000,
+    lock: 1,
+    lockText: '开锁',
+    changeLock: ''
   },
   onLoad:function(options){
     var array = this.initData();
@@ -69,6 +72,64 @@ Page({
     wx.navigateTo({
       url: '../product-details/product-details'
     })
+  },
+  changeLock() {
+    console.log(this.data.lock, '一开始的');
+    let self = this;
+    if( this.data.lock === 1 ) {
+      self.changeLockRequest(this.data.lock, function(res) {
+        if (res.data.error === 'device not online: 540430665') {
+          wx.showToast({
+            title: '设备不在线！',
+            image: 'images/icon_error.png'
+          }) 
+        } else {
+          self.data.lock = 0;
+          self.setData({
+            lockText: '关锁',
+            changeLock: 'changeLock'
+          })          
+          wx.showToast({
+            title: '开锁成功',
+            image: 'images/successed.png'
+          })          
+        } 
+      });
+    } else {
+      self.changeLockRequest(self.data.lock, function() {
+        self.setData({
+          lockText: '开锁',
+          changeLock: ''
+        })
+        self.data.lock = 1;
+        wx.showToast({
+          title: '关锁成功',
+          image: 'images/successed.png'
+        })        
+      })
+    }
+  },
+  // 开锁的请求方法，callback是传入的回调函数
+  changeLockRequest(newLock, callback) {
+    let self = this;
+    wx.request({
+      url: 'http://api.heclouds.com/cmds?device_id=540430665', //onenetapi地址＋设备id
+      method: "post",
+      data: {
+        _Mark: newLock
+      },
+      header: {
+        'api-key': 'pB2M55B9==a4Gm9K6rghKNV3cK4=',//onenet设备api-key
+        'Content-Type': 'application/json' // 默认值
+      },
+      success(res) {
+        callback(res);    
+        console.log(res, self.data.lock);   
+      },
+      fail() {
+        console.log('请求失败');
+      }
+    })    
   },
 
   onReady: function(){

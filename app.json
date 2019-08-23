@@ -1,9 +1,8 @@
 {
   "pages": [
+    "pages/index/index",
     "pages/product-details/product-details",
     "pages/me/me",
-    "pages/index/index",
-    
     "pages/shopping_cart/shopping_cart",
     "pages/login/login",
     "pages/role-select/role-select",
@@ -51,5 +50,10 @@
       }
     ]
   },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },  
   "sitemapLocation": "sitemap.json"
 }
