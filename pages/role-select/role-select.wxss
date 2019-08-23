@@ -1,0 +1,32 @@
+/* pages/select/select.wxss */
+.content{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 30rpx;
+}
+.seller{
+  width: 470rpx;
+  margin-bottom: 120rpx;
+}
+.buyer{
+  width: 470rpx;
+}
+.img{
+  width: 160rpx;
+  height: 160rpx;
+  display: block;
+}
+.text{
+  font-weight: bolder;
+  font-family: "微软雅黑";
+}
+.user-btn{
+  width: 250rpx;
+  height: 62rpx;
+  font-size: 26rpx;
+  margin-top: 26rpx;
+  color: #fff;
+  background-color: #f8c291;
+}

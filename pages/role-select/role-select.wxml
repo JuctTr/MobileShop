@@ -1,0 +1,38 @@
+<!--pages/select/select.wxml-->
+<view class='content display-flex align-items-center justify-content-center'>
+
+  <view class='userType'>
+    <!-- 卖家 -->
+    <view class='seller display-flex flex-space-between'>
+      <image class='img' src='images/merchant.png'></image>
+      <view class="" hover-class="none">
+        <text class='text'>商家</text>
+        <button
+          class="user-btn"
+          wx:if="{{!hasUserInfo}}"
+          open-type="getUserInfo"
+          lang="zh_CN"
+          bindgetuserinfo="bindGetUserInfo"> 
+          点击授权登录
+        </button>        
+      </view>
+    </view>
+    <!-- 买家 -->
+    <view class='buyer display-flex flex-space-between'>
+      <image class='img' src='images/consumer.png'></image>
+      <view class="" hover-class="none">
+        <text class='text'>消费者</text>
+        <button
+          class="user-btn"
+          wx:if="{{!hasUserInfo}}"
+          open-type="getUserInfo"
+          lang="zh_CN"
+          bindgetuserinfo="bindGetUserInfo"> 
+          点击授权登录
+        </button>        
+      </view>
+    </view>
+
+  </view>
+
+</view>

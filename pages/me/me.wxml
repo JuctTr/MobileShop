@@ -1,20 +1,15 @@
 <!--pages/me/me.wxml-->
 <view class='content'>
   <view class="userinfo">
-       <!-- <button
-        class="user-btn"
-        wx:if="{{!hasUserInfo}}"
-        open-type="getUserInfo"
-        lang="zh_CN"
-        bindgetuserinfo="bindGetUserInfo"> 
-        点击
-       </button> -->
-        <image
-          bindtap="getUserInfo"
-          class="userinfo-avatar"
-          src="{{userInfo.avatarUrl}}"
-          ></image>        
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>      
+    <image
+      bindtap="getUserInfo"
+      class="userinfo-avatar"
+      src="{{userInfo.avatarUrl}}"
+      ></image>        
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>      
+  </view>
+  <view class="myOrder">
+    我的订单
   </view>
   <view class='hr'></view>
   <view class='middle'>

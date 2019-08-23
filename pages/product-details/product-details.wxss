@@ -24,13 +24,94 @@ swiper{
   font-size: 20rpx;
   color: #a4b0be;
 }
+.money-box .right-box {
+  text-align: center;
+  font-size: 25rpx;
+  color: #747d8c;
+}
+.price {
+  color: red;
+  padding: 50rpx 0 0 0;
+}
 .inline{
   display: inline;
+  color: #333;
+  font-size: 22rpx;
+  text-decoration: line-through;
 }
 .page-bottom{
   width: 100%;
   height: 110rpx;
   position: fixed;
   bottom: 0;
-  background: #333;
+  font-size: 30rpx;
+  text-align: center;
+  background-color: #fff;
+}
+.collection{
+  flex: 1.5;
+  height: 100%;
+  border-right: 0.5rpx solid #dfdfdf;
+}
+.icon-cart{
+  flex: 2;
+  height: 100%;
+}
+.add-cart{
+  flex: 3;
+  height: 100%;
+  color: #fff;
+  background-color: wheat;
+}
+.buy{
+  flex: 3;
+  height: 100%;
+  color: #fff;
+  background-color: red;
+}
+/* 商品参数 */
+.goods-attr {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  padding: 0 31.25rpx 25rpx 31.25rpx;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.goods-attr .t {
+  width: 650rpx;
+  height: 104rpx;
+  line-height: 104rpx;
+  font-size: 38.5rpx;
+}
+
+.goods-attr .item {
+  width: 650rpx;
+  height: 50rpx;
+  padding: 11rpx 20rpx;
+  margin-bottom: 11rpx;
+  background: #f7f7f7;
+  font-size: 30rpx;
+}
+
+.goods-attr .left {
+  float: left;
+  font-size: 20rpx;
+  width: 134rpx;
+  height: 45rpx;
+  line-height: 45rpx;
+  overflow: hidden;
+  color: #999;
+}
+
+.goods-attr .right {
+  float: left;
+  font-size: 25rpx;
+  margin-left: 20rpx;
+  width: 480rpx;
+  height: 45rpx;
+  line-height: 45rpx;
+  overflow: hidden;
+  color: #333;
 }

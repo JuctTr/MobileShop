@@ -74,7 +74,7 @@
   position: relative;
 }
 .button-red {
-  background-color: #f44336; /* 红色 */
+  background-color: #f8c291; /* 红色 */
 }
 
 .item-allselect {

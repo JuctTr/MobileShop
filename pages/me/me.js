@@ -10,66 +10,64 @@ Page({
       avatarUrl: 'images/my.png',
       nickName: '未登录'
     },
-    hasUserInfo: false
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.getSetting({
-      success: (res) => {
-        if (res.authSetting['scope.userInfo']) {
-          wx.getUserInfo({
-            success: function(res) {
-              console.log(res, '我已经授权');
-            }
-          })
-        }
-      },
-      fail: () => {
-        console.log('失败')
-      }
-
-    })
-  },
-  bindGetUserInfo(res) {
-    console.log(res);
-    var userinfo = res.detail.userInfo;
-
+    console.log(app.globalData);
   },
   getUserInfo: function() {
-    var self = this;
-    console.log('我被点击了');
-    wx.showModal({
-      title: '获取你的头像和信息',
-      content: '内容',
-      showCancel: true,
-      cancelText: '取消',
-      cancelColor: '#000000',
-      confirmText: '确定',
-      confirmColor: '#3CC51F',
-      success: (result) => {
-        if(result.confirm){
-          
-        }
-      },
-      fail: ()=>{},
-      complete: ()=>{}
+    wx.navigateTo({
+      url: "/pages/role-select/role-select"
     });
+    // wx.showModal({
+    //   title: '获取你的头像和信息',
+    //   content: '内容',
+    //   showCancel: true,
+    //   cancelText: '取消',
+    //   cancelColor: '#000000',
+    //   confirmText: '确定',
+    //   confirmColor: '#3CC51F',
+    //   success: (result) => {
+    //     if(result.confirm){
+
+    //     }
+    //   },
+    //   fail: ()=>{},
+    //   complete: ()=>{}
+    // });
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+    wx.navigateTo({
+      url: '../role-select/role-select',
+      success: (result)=>{
+        
+      },
+      fail: ()=>{
+
+      },
+      complete: ()=>{}
+    });
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+// 如果没有登录信息, 我这里就去重定向到登录页面
+    if (app.globalData.hasLogin) {
+      this.setData({
+        userInfo: {
+          avatarUrl: app.globalData.userInfo.avatarUrl,
+          nickName: app.globalData.userInfo.nickName
+        }
+      })
+    }
   },
 
   /**
