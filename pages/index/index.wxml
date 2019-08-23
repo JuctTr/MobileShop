@@ -25,19 +25,19 @@
     <view>
       <image src='images/shop.png' style='width: 80rpx;height:80rpx'></image>
     </view>
-    <view class='text'>美食养生</view>
+    <view class='text'>商家管理</view>
   </view>
-  <view class='nav-item'>
-    <view>
+  <view class='nav-item' bindtap="changeLock">
+    <view >
       <image src='images/lock.png' style='width: 80rpx;height:80rpx'></image>
     </view>
-    <view class='text'>美食养生</view>
+    <view class="text {{changeLock}}">{{lockText}}</view>
   </view>
 </view>
 <!-- 下面的书本列表 -->
 <view class='hr'></view>
 <view class='head'>
-  <view>日常活动</view>
+  <view>热卖书籍</view>
   <view class='right'></view>
 </view>
 

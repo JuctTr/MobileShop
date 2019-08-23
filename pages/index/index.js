@@ -12,7 +12,10 @@ Page({
     circular: true,
     autoplay: true,
     interval: 5000,
-    duration: 1000
+    duration: 1000,
+    lock: 1,
+    lockText: '开锁',
+    changeLock: ''
   },
   onLoad:function(options){
     var array = this.initData();
@@ -24,32 +27,32 @@ Page({
     var array = [];
     var object1 = new Object();
     object1.img = "images/book-bg.png";
-    object1.title = "爱心早餐";
-    object1.type = "商品描述";
+    object1.title = "精神书铺";
+    object1.type = "书，是人类的精神食粮";
     object1.brower = "525642浏览";
     object1.moments = "评论区";
     array[0] = object1;
 
     var object2 = new Object();
     object2.img = "images/book-bg.png";
-    object2.title = "书籍";
-    object2.type = "商品描述";
+    object2.title = "发现";
+    object2.type = "为您推荐";
     object2.brower = "525642浏览";
     object2.moments = "评论区";
     array[1] = object2;
 
     var object3 = new Object();
     object3.img = "images/book-bg.png";
-    object3.title = "购物车";
-    object3.type = "商品描述";
+    object3.title = "故事";
+    object3.type = "我有酒，你有故事吗";
     object3.brower = "525642浏览";
     object3.moments = "评论区";
     array[2] = object3;
 
     var object4 = new Object();
     object4.img = "images/book-bg.png";
-    object4.title = "书籍";
-    object4.type = "商品描述";
+    object4.title = "日常必读";
+    object4.type = "哦豁，加油";
     object4.brower = "525642浏览";
     object4.moments = "评论区";
     array[3] = object4;
@@ -69,6 +72,64 @@ Page({
     wx.navigateTo({
       url: '../product-details/product-details'
     })
+  },
+  changeLock() {
+    console.log(this.data.lock, '一开始的');
+    let self = this;
+    if( this.data.lock === 1 ) {
+      self.changeLockRequest(this.data.lock, function(res) {
+        if (res.data.error === 'device not online: 540430665') {
+          wx.showToast({
+            title: '设备不在线！',
+            image: 'images/icon_error.png'
+          }) 
+        } else {
+          self.data.lock = 0;
+          self.setData({
+            lockText: '关锁',
+            changeLock: 'changeLock'
+          })          
+          wx.showToast({
+            title: '开锁成功',
+            image: 'images/successed.png'
+          })          
+        } 
+      });
+    } else {
+      self.changeLockRequest(self.data.lock, function() {
+        self.setData({
+          lockText: '开锁',
+          changeLock: ''
+        })
+        self.data.lock = 1;
+        wx.showToast({
+          title: '关锁成功',
+          image: 'images/successed.png'
+        })        
+      })
+    }
+  },
+  // 开锁的请求方法，callback是传入的回调函数
+  changeLockRequest(newLock, callback) {
+    let self = this;
+    wx.request({
+      url: 'http://api.heclouds.com/cmds?device_id=540430665', //onenetapi地址＋设备id
+      method: "post",
+      data: {
+        _Mark: newLock
+      },
+      header: {
+        'api-key': 'pB2M55B9==a4Gm9K6rghKNV3cK4=',//onenet设备api-key
+        'Content-Type': 'application/json' // 默认值
+      },
+      success(res) {
+        callback(res);    
+        console.log(res, self.data.lock);   
+      },
+      fail() {
+        console.log('请求失败');
+      }
+    })    
   },
 
   onReady: function(){

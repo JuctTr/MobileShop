@@ -1,11 +1,11 @@
 {
   "pages": [
+    "pages/index/index",
     "pages/product-details/product-details",
-    "pages/index/index",    
     "pages/me/me",
     "pages/shopping_cart/shopping_cart",
     "pages/login/login",
-    "pages/select/select",
+    "pages/role-select/role-select",
     "pages/type_in/type_in",
     "pages/location/location",
     "pages/mobile/mobile",
@@ -13,9 +13,9 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#494949",
+    "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "希卡",
-    "navigationBarTextStyle": "white",
+    "navigationBarTextStyle": "black",
     "backgroundColor": "#494949",
     "enablePullDownRefresh": true
   },
@@ -50,5 +50,10 @@
       }
     ]
   },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },  
   "sitemapLocation": "sitemap.json"
 }

@@ -14,7 +14,23 @@ Page({
     circular: true,
     autoplay: true,
     interval: 5000,
-    duration: 1000    
+    duration: 1000,
+    attribute: [{
+      attribute: '颜色',
+      value: '米白色'
+    },{
+      attribute: '等级',
+      value: '一等'
+    },{
+      attribute: '等级',
+      value: '一等'
+    },{
+      attribute: '等级',
+      value: '一等'
+    },{
+      attribute: '等级',
+      value: '一等'
+    }]
   },
 
   /**

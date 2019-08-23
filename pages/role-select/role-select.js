@@ -1,18 +1,40 @@
 // pages/select/select.js
+var app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+    userInfo: {},
+    hasUserInfo: false,
+    canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    console.log(app.globalData);   
+  },
+  bindGetUserInfo(res) {
+    if(res.detail.userInfo == undefined) {
+      app.globalData.hasLogin = false;
+      wx.showToast({
+        title: '微信登录失败',
+        image: 'images/icon_error.png'
+      })      
+    } else {
+      app.globalData.hasLogin = true;
+      wx.navigateBack({
+        delta: 1
+      });
+      app.globalData.userInfo = res.detail.userInfo;
+      wx.showToast({
+        title: '微信登录成功',
+        image: 'images/successed.png'
+      })
+    }
   },
 
   /**

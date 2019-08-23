@@ -1,27 +1,33 @@
 <!--pages/me/me.wxml-->
 <view class='content'>
   <view class="userinfo">
-    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    <!-- <image src="../../images/person/account_bg.png" class="account-bg"></image> -->
+    <image
+      bindtap="getUserInfo"
+      class="userinfo-avatar"
+      src="{{userInfo.avatarUrl}}"
+      ></image>        
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>      
+  </view>
+  <view class="myOrder">
+    我的订单
   </view>
   <view class='hr'></view>
   <view class='middle'>
     <view class='middle-item'>
-      <image class='img' src='images/shouhou.png'></image>
+      <image class='img' src='images/pendpay.png'></image>
       <view class='text'>待付款</view>
     </view>
     <view class='middle-item'>
-      <image class='img' src='images/shouhou.png'></image>
-      <view class='text'>余额</view>
+      <image class='img' src='images/send.png'></image>
+      <view class='text'>待发货</view>
     </view>
     <view class='middle-item'>
-      <image class='img' src='images/shouhou.png'></image>
-      <view class='text'>XXXX</view>
+      <image class='img' src='images/receive.png'></image>
+      <view class='text'>待收货</view>
     </view>
     <view class='middle-item'>
-      <image class='img' src='images/shouhou.png'></image>
-      <view class='text'>XXXX</view>
+      <image class='img' src='images/comment.png'></image>
+      <view class='text'>待评价</view>
     </view>
   </view>
   <view class='hr'></view>

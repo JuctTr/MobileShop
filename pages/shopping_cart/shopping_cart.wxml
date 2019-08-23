@@ -4,7 +4,7 @@
   <!-- 分割线 -->
   <view class="separate"></view>
 
-  <view wx:for="{{carts}}">
+  <view wx:for="{{carts}}" wx:key="key">
     <view class="cart_container">
       <!-- 单项选择器 -->
       <image class="item-select" bindtap="switchSelect" data-index="{{index}}" data-id="{{index}}" src="{{item.isSelect?'../shopping_cart/images/select.png':'../shopping_cart/images/select_reveal.png'}}" />

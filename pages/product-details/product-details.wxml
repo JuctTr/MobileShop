@@ -16,16 +16,31 @@
       <view class="price">￥3900 <view class="inline">￥4025</view></view>
     </view>
     <view class="right-box">
-      <icon class="iconfont"></icon>
+      <image style="width: 32rpx; height: 32rpx;" src="images/share.png"></image>
       <view class="share-btn">分享</view>
+    </view>      
     
-      </view>      
-    </view>
   </view>
 
-  <view class="page-bottom">
-    <view class="iconfont">
-      图标图标图标图标图标
+  <view class="goods-attr">
+    <view class="t">书籍参数</view>
+    <view class="l">
+      <view class="item" wx:for="{{attribute}}" wx:key="name">
+        <text class="left">{{item.attribute}}</text>
+        <text class="right">{{item.value}}</text>
+      </view>
     </view>
+  </view>  
+
+  <view class="page-bottom display-flex">
+    <view class="collection flex-center">
+      <image style="width: 50rpx; height: 50rpx;" src="images/icon_collect.png"></image>
+    </view>
+    <view class="icon-cart flex-center">
+      <image style="width: 55rpx; height: 55rpx;" src="images/add-cart.png"></image>
+    </view>
+    <view class="add-cart flex-center">加入购物车</view>
+    <view class="buy flex-center">购买</view>
   </view>
+
 </view>
