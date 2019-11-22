@@ -2,7 +2,6 @@
 var QQMapWX = require('../qqmap-wx-jssdk.js');
 var qqmapsdk;
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -27,7 +26,6 @@ Page({
       }
     })
   },
-
   /**
    * 生命周期函数--监听页面加载
    */

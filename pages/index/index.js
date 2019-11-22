@@ -132,18 +132,11 @@ Page({
     })    
   },
 
-  onReady: function(){
-    
-  },
-  onShow: function(){
-
-  },
-  onHide: function(){
-
-  },
-  onUnload: function(){
-
-  },
+  onReady: function(){},
+  onShow: function(){},
+  onHide: function(){},
+  onUnload: function(){},
+  
   onPullDownRefresh: function(){
     console.log("下拉刷新");
     wx.showNavigationBarLoading()

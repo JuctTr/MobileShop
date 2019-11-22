@@ -25,8 +25,6 @@ Page({
   imageskip: function(){
      console.log(this.data.imgsrc);
        var imgskip = this.data.imgsrc;
-      //  var that = this;
-      //  that.accountInput();
        if (imgskip == "images/hidden.png"){
         this.setData({ 
           imgsrc: "images/see.png"
